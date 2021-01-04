@@ -5,7 +5,7 @@ General Idea
 - clean data from FPL directly
 - add predictions from FiveThirtyEight to provide team-level features (e.g. what's the probability Arsenal will win next weekend)
 - predict points players will earn each gameweek
-- use an optimizer to determine best possible squad to field, given budget constraints
+- use an optimizer  to determine best possible squad to field, given budget constraints
 - use a transfer optimizer to determine best ways to use weekly transfer window
 
 To-do's
