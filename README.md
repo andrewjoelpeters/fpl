@@ -4,10 +4,10 @@ fpl-predictor
 Using machine learning to predict Fantasy Premier League scores and pick the *playable* team with highest predicted score
 
 General Idea
-- clean data from FPL directly
-- engineer features using rolling windows on past player and team performance. Add in the opponents plast performance as well.
+- Gather historic data, join with current season data pulled via the fantasy.premierleague.com API
+- engineer features using rolling windows on past player and team performance. Add in the opponents past performance as well.
 - predict points players will earn each gameweek
-- use an optimizer  to determine best possible squad to field, given budget constraints
+- use an optimizer to optimize predicted points earned, given budget constraints, constraints on positions, etc. 
 - use a transfer optimizer to determine best ways to use weekly transfer window
 
 Further Ideas
