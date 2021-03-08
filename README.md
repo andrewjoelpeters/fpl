@@ -18,7 +18,6 @@ Further Ideas
 - add in expected goals data from understat. This would help determine whether a player performed well but didn't earn points (signifying that they might still be a good pick, just got unlucky that week), or whether the player's underlying performance was poor. FPL has its own expected points stat -- I have no idea where this comes from or how effective it is.
 
 
-
 Project Organization
 ------------
 
@@ -35,6 +34,15 @@ Project Organization
     │
     ├── references       
 
+
+**Models**
+
+| Model     | Description | Overall Score | Performance with Players Getting Over 5 Pts
+| ----------- | ----------- | ----------- | -----------
+| xgb_256      | Model trained on all data except top .05% of single-game points | 2.56 | 3.04
+| xgb_pts_per_min | Model trained on all data except top .05% of single-game points. Instead of target value being total # of pts, target value is the pts earned per minuted played. Predictions were multiplied by actual minutes played (model is assuming perfect forecast of minutes played) | 2.37 | 2.48
+| xgb_254 | Same as 256, but with an optimized num_estimators (30) | 2.54 | 3.00
+| xgb_forward_rolling_232 | model trained to predict aggregated scores over next 3 gws. Significantly improved scores when players earn over 5 pts in a gw  | 2.32 | 2.48
 
 --------
 
